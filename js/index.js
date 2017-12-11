@@ -4,7 +4,7 @@ function buttonclick(){
   console.log(newDataFormatObj);
   oParam = {
     riskLevel : riskLevel["Height"],
-    BMI       :99,   //BMI值
+    BMI       :233,   //BMI值
     waistline :28,   //腰围
     fastingBloodGlucose : 39, //空腹血糖
     CHDL  : 39,//高密度脂蛋白
@@ -16,6 +16,7 @@ function buttonclick(){
     name : "123",
     age : "23",
     sex : 1,
+    phone: "12302321",
   }
 
   newDataFormatObj.setData(oParam);
@@ -47,9 +48,7 @@ function buttonclick(){
   reportPageDataList.collectData(newDataFormatniguding);
   var strFinalProtocol = reportPageDataList.EncodeProtocal();
   console.log(strFinalProtocol);
-  key = reportPageDataList.oProfile.name + "_"  +
-        reportPageDataList.oProfile.age + "_" +
-        reportPageDataList.oProfile.sex;
+  key = reportPageDataList.getKey();
 
   console.log(key);
 
