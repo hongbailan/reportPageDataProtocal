@@ -537,7 +537,8 @@ var reportPageDataList = function(){
   this.oProfile = {
     name : "",
     age  : "",
-    sex  : 0
+    sex  : 0,
+    phone: "",
   }
 
   this.protocol = {
@@ -557,6 +558,11 @@ reportPageDataList.prototype.setProfile = function(oProfile){
   this.oProfile.name = oProfile.name;
   this.oProfile.age  = oProfile.age;
   this.oProfile.sex  = oProfile.sex;
+  this.oProfile.phone = oProfile.phone;
+}
+
+reportPageDataList.prototype.getKey = function(){
+  return this.oProfile.name + "_" + this.oProfile.age + "_" + this.oProfile.sex + "_" + this.oProfile.phone;
 }
 
 reportPageDataList.prototype.setTime = function(time){
