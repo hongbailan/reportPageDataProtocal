@@ -19,7 +19,7 @@
 // }
 //-----------------------------------------------------------------------------------------------
 //
-
+//v0.1  :在oProfile增加phone电话号码
 
 var riskLevel = {"Height":"高风险","Middle":"中等风险","Small":"较小风险"}
 var dataFormat = {
@@ -41,7 +41,8 @@ var abReportPageData = function(){
     this.oProfile = {
       name : "",
       age : "",
-      sex : 0
+      sex : 0,
+      phone : "",
     }
     this.oParam = {
       riskLevel : riskLevel["Small"],
@@ -57,6 +58,7 @@ abReportPageData.prototype.setProfile = function(oProfile){
   this.oProfile.name = oProfile.name;
   this.oProfile.sex  = oProfile.sex;
   this.oProfile.age  = oProfile.age;
+  this.oProfile.phone = oProfile.phone;
 }
 
 abReportPageData.prototype.setTime = function(time){
