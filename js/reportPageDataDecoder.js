@@ -18,7 +18,7 @@
 //   }
 // }
 //----------------------------------------------------------------------------------------------
-//
+// v0.1 增加电话号码的解析
 
 
 var reportPageDataDecoder = function(data){
@@ -48,6 +48,7 @@ reportPageDataDecoder.prototype.analyzeData = function(){
     this.oProfile.age  = this.JSONObj.value.oProfile.age;
     this.oProfile.name = this.JSONObj.value.oProfile.name;
     this.oProfile.sex  = this.JSONObj.value.oProfile.sex;
+    this.oProfile.phone = this.JSONObj.value.oProfile.phone
     this.time = this.JSONObj.value.time;
 
     for (var i = 0; i < this.JSONObj.value.oParam.length; i ++){
