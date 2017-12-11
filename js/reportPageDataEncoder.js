@@ -166,7 +166,7 @@ var diabetesPageData = function(){
     riskLevel : riskLevel["Small"],
     BMI       :0,   //BMI值
     waistline :0,   //腰围
-    fastingBloodGlucose : 0, //空腹血糖
+    fastingBloodGlucose : 0, //空腹血糖 与DiFPG重复目前先使用
     CHDL  : 0,//高密度脂蛋白
     gardenStuff : 0,//蔬菜摄入量
     DiFPG : 0, //空腹血糖浓度
