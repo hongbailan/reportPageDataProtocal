@@ -13,7 +13,7 @@ function buttonclick(){
   }
 
   oProfile = {
-    name : "123",
+    name : "陈",
     age : "23",
     sex : 1,
     phone: "12302321",
@@ -54,8 +54,8 @@ function buttonclick(){
 
   $.ajax({
       // url:"http://192.168.0.184:8080/kvstore ",
-      url:"http://uf.gqlife.cn/ws/kvstore",
-      //url:"http://127.0.0.1:8081/kvstore",
+      //url:"http://uf.gqlife.cn/ws/kvstore",
+      url:"http://127.0.0.1:8081/kvstore",
       cache: false,
       type: "POST",
       data:{
@@ -109,4 +109,26 @@ function buttongetData(){
       console.log(objniguding.toJson());
     }
   }
+}
+
+function buttongetKeys(){
+  $.ajax({
+    url:"http://127.0.0.1:8081/kvstore",
+    cache:false,
+    type:"POST",
+    data:{
+      "action":"getUser",
+      "key":"getall",
+    },
+    error:function(e){
+      console.log("发送错误");
+      console.log(e);
+    },
+    success:function(data){
+      console.log(data);
+      var keys = eval ("(" + data + ")");
+      obj = analyzeProfile(keys.keys[0]);
+      console.log(obj);
+    }
+  })
 }
