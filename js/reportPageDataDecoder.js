@@ -74,3 +74,18 @@ reportPageDataDecoder.prototype.analyzeDecoder = function(illName){
 reportPageDataDecoder.prototype.clear = function(){
   this.kvMap.clear();
 }
+
+//解析getUser人物列表
+//入参为每个人物profile
+//jsProfile[0] 为姓名，profile[1]为性别，profile[2]s[3]为电话号码
+var analyzeProfile = function(profile){
+  var jsProfile = null;
+  profile ='{"profiles":' + '["' + profile.replace(/_/g,'","') + '"]}';
+  try{
+    jsProfile = JSON.parse(profile);
+  }catch(e){
+    console.log(e);
+    return null;
+  }
+  return jsProfile;
+}
