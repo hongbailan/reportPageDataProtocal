@@ -4,6 +4,8 @@ function buttonclick(){
   console.log(newDataFormatObj);
   oParam = {
     riskLevel : riskLevel["Height"],
+    height : 99,
+    weight :90,
     BMI       :233,   //BMI值
     waistline :28,   //腰围
     fastingBloodGlucose : 39, //空腹血糖
@@ -13,10 +15,10 @@ function buttonclick(){
   }
 
   oProfile = {
-    name : "陈",
+    name : "李",
     age : "23",
     sex : 1,
-    phone: "12302321",
+    phone: "142229192",
   }
 
   newDataFormatObj.setData(oParam);
@@ -54,8 +56,8 @@ function buttonclick(){
 
   $.ajax({
       // url:"http://192.168.0.184:8080/kvstore ",
-      //url:"http://uf.gqlife.cn/ws/kvstore",
-      url:"http://127.0.0.1:8081/kvstore",
+      url:"http://uf.gqlife.cn/ws/kvstore",
+      //url:"http://127.0.0.1:8080/kvstore",
       cache: false,
       type: "POST",
       data:{
@@ -113,7 +115,7 @@ function buttongetData(){
 
 function buttongetKeys(){
   $.ajax({
-    url:"http://127.0.0.1:8081/kvstore",
+    url:"http://127.0.0.1:8080/kvstore",
     cache:false,
     type:"POST",
     data:{
@@ -127,7 +129,7 @@ function buttongetKeys(){
     success:function(data){
       console.log(data);
       var keys = eval ("(" + data + ")");
-      obj = analyzeProfile(keys.keys[0]);
+      obj = analyzeProfile(keys.keys[1]);
       console.log(obj);
     }
   })
