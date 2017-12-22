@@ -94,6 +94,7 @@ var reportPageData = function(){
     riskLevel : riskLevel["Small"],
     //数值
     weight : 0,   //体重
+    height : 0,   //身高
     BMI    : 0,   //BMI值
     waistline : 0, //腰围
     fatRate : 0, //脂肪率
@@ -121,6 +122,7 @@ var reportPageData = function(){
 reportPageData.prototype.setData = function(oParam){
   this.oParam.riskLevel = oParam.riskLevel;
   this.oParam.weight = oParam.weight;   //体重
+  this.oParam.height= oParam.height;  //身高
   this.oParam.BMI    = oParam.BMI;   //BMI值
   this.oParam.waistline = oParam.waistline; //腰围
   this.oParam.fatRate = oParam.fatRate; //脂肪率
@@ -166,6 +168,8 @@ var diabetesPageData = function(){
   this.illName = "糖尿病风险"
   this.oParam = {
     riskLevel : riskLevel["Small"],
+    weight  :0, //体重
+    height  :0, //身高
     BMI       :0,   //BMI值
     waistline :0,   //腰围
     fastingBloodGlucose : 0, //空腹血糖 与DiFPG重复目前先使用
@@ -182,6 +186,8 @@ diabetesPageData.prototype.setData = function(oParam){
   this.oParam.riskLevel = oParam.riskLevel;
   this.oParam.BMI       = oParam.BMI;   //BMI值
   this.oParam.waistline = oParam.waistline;   //腰围
+  this.oParam.weight    = oParam.weight;
+  this.oParam.height    = oParam.height;
   this.oParam.fastingBloodGlucose = oParam.fastingBloodGlucose; //空腹血糖
   this.oParam.CHDL  = oParam.CHDL;//高密度脂蛋白
   this.oParam.gardenStuff = oParam.gardenStuff;//蔬菜摄入量
@@ -217,6 +223,8 @@ var ischemicHeartDisease = function(){
     totalCholesterol : 0, //总胆固醇
     systolicPressure : 0, //收缩压
     homocysteine     : 0, //同型半胱氨酸
+    height           : 0, //身高
+    weight           : 0, //体重
     BMI       :0,   //BMI值
   }
 }
@@ -226,6 +234,8 @@ ischemicHeartDisease.prototype.setData = function(oParam){
   this.oParam.totalCholesterol = oParam.totalCholesterol;//总胆固醇
   this.oParam.systolicPressure = oParam.systolicPressure;     //收缩压
   this.oParam.homocysteine     = oParam.homocysteine; //同型半胱氨酸
+  this.oParam.height           = oParam.height;
+  this.oParam.weight           = oParam.weight;
   this.oParam.BMI  = oParam.BMI;   //BMI值
 }
 
@@ -324,6 +334,7 @@ var obesityPageData = function(){
     riskLevel : riskLevel["Small"],
     waistline : 0,          //腰围
     weight    : 0,          //体重
+    height    : 0,          //身高
     BMI       : 0,
     bodyFatPercentage : 0,   //体脂率
     ObHis     : 0,  //肥胖家族史
@@ -334,6 +345,7 @@ obesityPageData.prototype.setData = function(oParam){
   this.oParam.riskLevel = oParam.riskLevel;
   this.oParam.waistline = oParam.waistline;   //腰围
   this.oParam.BMI       = oParam.BMI;   //BMI值
+  this.oParam.height    = oParam.height;
   this.oParam.bodyFatPercentage = oParam.bodyFatPercentage; //体脂率
   this.oParam.ObHis     = oParam.ObHis;
   this.oParam.weight    = oParam.weight;
@@ -363,6 +375,8 @@ var hypertensionPageData = function(){
     riskLevel : riskLevel["Small"],
     systolicPressure : 0,     //收缩压
     diastolicPressure : 0,    //舒张压
+    weight    : 0,          //体重
+    height    : 0,          //身高
     BMI  : 0
   }
 }
@@ -372,6 +386,8 @@ hypertensionPageData.prototype.setData = function(oParam){
   this.oParam.systolicPressure = oParam.systolicPressure;     //收缩压
   this.oParam.diastolicPressure = oParam.diastolicPressure;    //舒张压
   this.oParam.BMI  = oParam.BMI;
+  this.oParam.height           = oParam.height;
+  this.oParam.weight           = oParam.weight;
 }
 
 hypertensionPageData.prototype.setProfile = function(oProfile){
@@ -429,6 +445,8 @@ var dyslipidemiaPageData = function(){
     riskLevel : riskLevel["Small"],
     totalCholesterol : 0, //总胆固醇
     triglyceride :0, //甘油三酯
+    height :0,
+    weight :0,
     CHDL : 0, //  高密度脂蛋白胆固醇
     CLDL : 0,// 低密度脂蛋白胆固醇
     BMI  : 0
@@ -442,6 +460,8 @@ dyslipidemiaPageData.prototype.setData = function(oParam){
   this.oParam.CHDL = oParam.CHDL;
   this.oParam.CLDL = oParam.CLDL;
   this.oParam.BMI  = oParam.BMI;
+  this.oParam.height           = oParam.height;
+  this.oParam.weight           = oParam.weight;
 }
 
 dyslipidemiaPageData.prototype.setProfile = function(oProfile){
