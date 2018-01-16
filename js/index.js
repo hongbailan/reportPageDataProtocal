@@ -107,9 +107,14 @@ function buttongetData(){
       console.log(obj.toJson());
     }
     objniguding = rpdDecoder.analyzeDecoder('尼古丁成瘾');
-    if (obj != null){
+    if (objniguding != null){
       console.log(objniguding.toJson());
     }
+    objfeipang = rpdDecoder.analyzeDecoder('肥胖症风险');
+    if(objfeipang != null){
+      console.log(getHealthyAlgorithms('BMI',objfeipang));
+    }
+
   }
 }
 

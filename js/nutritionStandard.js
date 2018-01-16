@@ -1,0 +1,53 @@
+//营养标准
+var nutritionStandard = {
+  //BMI指数
+  "BMI":{"Shape1":{"upper":"18.5","lower":"0"},
+          "Shape2":{"upper":"24","lower":"18.5"},
+          "Shape3":{"upper":"28","lower":"24"},
+          "Shape4":{"upper":"100","lower":"29"}
+        },
+
+  "nutritionDemand":{
+      //能量需求
+      "energyDemand":{
+        "Shape1":"35",
+        "Shape2":"30",
+        "Shape3":"25",
+        "Shape4":"20",
+      },
+      //维生素需求
+      "VAdemand":{
+        "sex1":"700",
+        "sex2":"800",
+      },
+      //维生素B需求
+      "VBdemand":{
+        "sex1":"1.2",
+        "sex2":"1.4",
+      },
+      //维生素B1需求
+      "VB2demand":{
+        "sex1":"1.2",
+        "sex2":"1.4",
+      },
+      //维生素C需求
+      "VCdemand":"100",
+      //钙需求
+      "Cademand":"800",
+      //铁需求
+      "Fedemand":{
+        "sex1":"20",
+        "sex2":"12",
+      },
+      //锌需求
+      "Zndemand":{
+        "sex1":"7.5",
+        "sex2":"12.5"
+      }
+    }
+  //营养评分
+  "nuritionScore":{
+    "p1":{"upper":"1.2","lower":"1","ch":"1"}, //ch表示需要做算法变换
+    "p2":{"upper":"1.2","lower":"1","chlower":"0.9","chupper":"1.1"} //ch为需要做算法变换
+  }
+}
