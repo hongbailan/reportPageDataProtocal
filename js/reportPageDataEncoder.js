@@ -20,6 +20,7 @@
 //-----------------------------------------------------------------------------------------------
 //
 //v0.1  :在oProfile增加phone电话号码
+//v0.2  :可以修改风险评估
 
 var riskLevel = {"Height":"高风险","Middle":"中等风险","Small":"较小风险"}
 var dataFormat = {
@@ -63,6 +64,10 @@ abReportPageData.prototype.setProfile = function(oProfile){
 
 abReportPageData.prototype.setTime = function(time){
   this.time = time;
+}
+
+abReportPageData.prototype.setRiskLevel = function(riskLevel){
+  this.oParam.riskLevel = riskLevel;
 }
 
 abReportPageData.prototype.toJson = function(){
